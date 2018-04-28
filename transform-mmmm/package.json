@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "babel-plugin-transform-mmmm",
+  "description": "A plugin for Babel 6 that compiles to an Mmmm runtime",
+  "version": "0.0.1",
+  "author": "d3dc",
+  "main": "lib",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d3dc/Mmmm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/d3dc/Mmmm/issues"
+  },
+  "keywords": [
+    "babel",
+    "babel-plugin",
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.2.0",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "watch": "babel src -d lib -w",
+    "prepublish": "npm run build",
+    "test": "babel-node node_modules/.bin/_mocha --recursive test"
+  }
+}
