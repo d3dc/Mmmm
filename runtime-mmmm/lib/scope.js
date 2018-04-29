@@ -24,7 +24,8 @@ function* _generator (m) {
 }
 
 function Scope (m) {
-  this.loop = _generator(m)
+  this.loop = _generator(m) // Init
+  this.loop.next() // first yield
 }
 
 Scope.prototype.run = function run (code, cb) {
