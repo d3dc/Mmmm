@@ -2,8 +2,9 @@ const Script = require('./script')
 const runtime = require('./runtime')
 const sanitize = require('./sanitize')
 
-module.exports = function mmmmEval (code, inputs) {
-  const script = new Script(sanitize(code))
+module.exports = function mmmmEval (code, inputs, callback) {
   const m = runtime(inputs)
-  return script(m)
+  const script = new Script(m, sanitize(code))
+
+  return script.run(callback)
 }

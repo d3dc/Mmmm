@@ -1,7 +1,6 @@
 const repl = require('repl')
 
 const Script = require('./script')
-const Scope = require('./scope')
 const runtime = require('./runtime')
 const sanitize = require('./sanitize')
 
@@ -9,16 +8,15 @@ const sanitize = require('./sanitize')
 repl._builtinLibs = []
 
 function evalWith (m) {
-  // Start with an empty script
-  // and an empty environment
-  const scope = new Scope(m)
+  // Start with an empty environment
+  const script = new Script(m)
 
   return function mmmmReplEval (input, context, filename, callback) {
     if (input === '\n') {
       return callback(null)
     }
-    const script = new Script(sanitize(input))
-    scope.run(script.source, callback)
+    script.append(sanitize(input))
+    script.step(callback)
   }
 }
 
@@ -38,6 +36,7 @@ exports.start = function start () {
     help: 'Flush output buffer',
     action () {
       console.log(m.o)
+      m.o = ''
       this.displayPrompt()
     }
   })
