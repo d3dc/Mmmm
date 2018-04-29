@@ -5,9 +5,10 @@
   "description": "Mmmm compiler and shell",
   "main": "mmmm-runtime",
   "bin": {
-    "Mmmm": "Mmmm"
+    "Mmmm": "index.js"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,7 +27,7 @@
   "dependencies": {
     "babel-cli": "^6.2.0",
     "chai": "^3.4.1",
-    "mocha": "^2.3.4",
+    "mocha": "^2.3.4"
   },
   "homepage": "https://github.com/d3dc/Mmmm#readme"
 }

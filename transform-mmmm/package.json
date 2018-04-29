@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "babel-plugin-transform-mmmm",
-  "description": "A plugin for Babel 6 that compiles to an Mmmm runtime",
+  "description": "A plugin for Babel 6 that transforms code to Mmmm()",
   "version": "0.0.1",
   "author": "d3dc",
   "main": "lib",
