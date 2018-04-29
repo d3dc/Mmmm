@@ -23,13 +23,17 @@ function* _generator (m) {
   }
 }
 
-function Scope (m) {
-  this.loop = _generator(m) // Init
-  this.loop.next() // first yield
-}
+class Scope {
 
-Scope.prototype.run = function run (code, cb) {
-  this.loop.next({ code, cb })
+  constructor (m) {
+    this.loop = _generator(m) // Init
+    this.loop.next() // first yield
+  }
+
+  run (code, cb) {
+    this.loop.next({ code, cb })
+  }
+
 }
 
 module.exports = Scope
