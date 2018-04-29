@@ -21,6 +21,7 @@
     "url": "https://github.com/d3dc/Mmmm/issues"
   },
   "dependencies": {
+    "readline-sync": "^1.4.9"
   },
   "homepage": "https://github.com/d3dc/Mmmm#readme"
 }
