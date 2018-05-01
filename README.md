@@ -54,7 +54,10 @@ SuperJedi224's entire implementation can be found [here](http://jsfiddle.net/Sup
 
 ## Goal
 
-Learn how to write a babel plugin :P
+I wanted to learn how to write a babel plugin for another gaming-related project.
+
+After playing with this and seeing how haskell or lisp-like it is, these micro-vms started to make sense.
+I've basically built a tiny hypervisor for sh*tty in-javascript VMs with a fun way to address them. I plan to integrate this concept into my gaming-related project.
 
 ## TODO
 
