@@ -17,7 +17,7 @@ function makeInstructions (ops) {
     }, {})
 }
 
-module.exports = function runtime (args) {
+module.exports = function machine (args) {
   const inputs = args || []
 
   const memory = {
@@ -30,7 +30,7 @@ module.exports = function runtime (args) {
     1: () => counter(),
     2: (a) => { memory.d.push(a); return memory.d.length },
     3: () => memory.d.pop(),
-    4: () => inputs.pop() || prompt(),
+    4: () => Number(inputs.pop() || prompt()),
     5: (a) => memory.o += a,
     6: (a) => memory.o += String.fromCharCode(a),
     7: (a, b) => a ? b.m() : 0,

@@ -1,5 +1,5 @@
 const Script = require('./script')
-const runtime = require('./runtime')
+const runtime = require('./m')
 const sanitize = require('./sanitize')
 
 module.exports = function mmmmEval (code, inputs, callback) {

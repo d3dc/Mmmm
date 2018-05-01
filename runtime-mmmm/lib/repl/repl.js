@@ -1,15 +1,15 @@
 const repl = require('repl')
 
-const Script = require('./script')
-const runtime = require('./runtime')
-const sanitize = require('./sanitize')
+const ReplScript = require('./repl-script')
+const runtime = require('../m')
+const sanitize = require('../sanitize')
 
 // Remove nodejs libs like fs and os
 repl._builtinLibs = []
 
 function evalWith (m) {
   // Start with an empty environment
-  const script = new Script(m)
+  const script = new ReplScript(m)
 
   return function mmmmReplEval (input, context, filename, callback) {
     if (input === '\n') {
