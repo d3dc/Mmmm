@@ -2,9 +2,11 @@
 
 > Mmmm() is an esoteric "microlanguage" by [SuperJedi224](https://github.com/SuperJedi224), inspired in part by Brainf***.
 
-This repo currently provides a javascript runtime environment for Mmmm(). It provides a `Script` type that creates a sandboxed environment bound to the Mmmm micro-VM.
+This repo currently provides a javascript runtime and repl for Mmmm(). It provides a `Script` type that creates a sandboxed environment bound to the Mmmm micro-VM.
 
-In the future this repo will also provide a transpiler to compile simple ES5 javascript into Mmmm() code so you never actually have to write it.
+The `Script` type should be able to be bound to different micro-machines and sub-classed to extend the interface.
+
+In the future this repo will also provide a transpiler to compile simple ES5 javascript according to a micro-machine spec so you never actually have to write it.
 
 
 ```Mmmm
